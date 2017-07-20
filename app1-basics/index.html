@@ -1,9 +1,12 @@
-<html>
-	<body>
-	
+<html ng-app="myApp">
+
+<body ng-controller="controller">
+	<form ng-submit="postMessage(message)">
+		<input class="form-control text-box" type="text" ng-model="inputText"> {{inputText}}
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
-	</body>
+</body>
+
 </html>

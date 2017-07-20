@@ -1,9 +1,24 @@
-<html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="app">
+
+<body ng-controller="controller">
+	<div class="">
+	</div>
+
+	<input type="text" ng-model="PersonFilter">
+	<ul ng-repeat="person in getData | filter: PersonFilter">
+		<li>Name: {{person.name}}</li>
+		<li>Gender: {{person.gender}}</li>
+		<li>Height: {{person.height}}</li>
+		<li>Hair Color: {{person.hair_color}}</li>
+		<li>Eye Color: {{person.eye_color}}</li>
+		<li>Year of Birth: {{person.birth_year}}</li>
+	</ul>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>

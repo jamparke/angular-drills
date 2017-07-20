@@ -1,9 +1,23 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="arrayApp">
+
+<head>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body ng-controller="arrayController">
+
+	<h1>Address Book</h1>
+	<h2>Filter</h2>
+	<input type="text" name="name" value="" ng-model="filterByName.name">
+	<ul ng-repeat="person in myData | filter: filterByName">
+		<li>Name: <b>{{person.name}}</b><br>Email: {{person.email}}<br>Cell: {{person.phone}}<br>Date Hired: {{person.dateEmployed}}
+
+		</li>
+	</ul>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>
